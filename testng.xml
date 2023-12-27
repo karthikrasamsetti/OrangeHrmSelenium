@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/karthik.rasametti/IdeaProjects/OrangeHrm">
+        <classes>
+            <class name="org.example.base.WebTest">
+                <methods>
+                    <include name="forgotPasswordTest"/>
+                    <include name="passwordResetTest"/>
+                    <include name="loginTest"/>
+                    <include name="createUserTest"/>
+                    <include name="editUserTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
