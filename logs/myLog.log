@@ -1,0 +1,31 @@
+[INFO ] 2023-12-28 14:49:48,294 org.example.base.Base:43 - beforeSuite started
+[INFO ] 2023-12-28 14:49:50,663 org.example.base.Base:58 - Report Setup in each Test
+[INFO ] 2023-12-28 14:49:50,857 org.example.base.WebTest:30 - launch url
+[INFO ] 2023-12-28 14:49:54,355 org.example.base.WebTest:36 - forgotPasswordTest started
+[INFO ] 2023-12-28 14:50:00,618 org.example.base.WebTest:43 - forgotPasswordTest ended
+[INFO ] 2023-12-28 14:50:00,629 org.example.base.Base:90 - Report Result in each Test
+[INFO ] 2023-12-28 14:50:00,637 org.example.base.WebTest:30 - launch url
+[INFO ] 2023-12-28 14:50:01,326 org.example.base.WebTest:48 - passwordResetTest started
+[INFO ] 2023-12-28 14:50:03,192 org.example.base.WebTest:56 - passwordResetTest ended
+[INFO ] 2023-12-28 14:50:03,194 org.example.base.Base:90 - Report Result in each Test
+[INFO ] 2023-12-28 14:50:03,196 org.example.base.WebTest:30 - launch url
+[INFO ] 2023-12-28 14:50:05,068 org.example.base.WebTest:61 - loginTest started
+[INFO ] 2023-12-28 14:50:10,847 org.example.base.WebTest:69 - loginTest ended
+[INFO ] 2023-12-28 14:50:10,848 org.example.base.Base:90 - Report Result in each Test
+[INFO ] 2023-12-28 14:50:10,849 org.example.base.WebTest:30 - launch url
+[INFO ] 2023-12-28 14:50:11,769 org.example.base.WebTest:74 - createUserTest started
+[INFO ] 2023-12-28 14:50:34,662 org.example.base.WebTest:85 - createUserTest ended
+[INFO ] 2023-12-28 14:50:34,663 org.example.base.Base:90 - Report Result in each Test
+[INFO ] 2023-12-28 14:50:34,664 org.example.base.WebTest:30 - launch url
+[INFO ] 2023-12-28 14:50:35,374 org.example.base.WebTest:91 - editUserTest started
+[INFO ] 2023-12-28 14:51:01,904 org.example.base.WebTest:101 - editUserTest ended
+[INFO ] 2023-12-28 14:51:01,905 org.example.base.Base:90 - Report Result in each Test
+[INFO ] 2023-12-28 14:51:01,906 org.example.base.WebTest:30 - launch url
+[INFO ] 2023-12-28 14:51:02,688 org.example.base.WebTest:105 - adminUserTest started
+[INFO ] 2023-12-28 14:51:15,666 org.example.base.WebTest:118 - adminUserTest ended
+[INFO ] 2023-12-28 14:51:15,667 org.example.base.Base:90 - Report Result in each Test
+[INFO ] 2023-12-28 14:51:15,668 org.example.base.WebTest:30 - launch url
+[INFO ] 2023-12-28 14:51:16,237 org.example.base.WebTest:122 - deleteUserTest started
+[INFO ] 2023-12-28 14:51:25,371 org.example.base.WebTest:134 - deleteUserTest ended
+[INFO ] 2023-12-28 14:51:25,372 org.example.base.Base:90 - Report Result in each Test
+[INFO ] 2023-12-28 14:51:26,051 org.example.base.Base:114 - driver is stopped
