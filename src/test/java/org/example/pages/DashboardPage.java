@@ -14,6 +14,8 @@ public class DashboardPage {
     WebElement roleSelect;
     @FindBy(xpath = "(//div[@role='option'])[3]")
     WebElement selectEss;
+    @FindBy(xpath = "(//div[@role='option'])[2]")
+    WebElement selectAdmin;
     @FindBy(xpath = "(//div[@class='oxd-select-text oxd-select-text--active'])[2]")
     WebElement statusSelect;
     @FindBy(xpath = "//span[normalize-space()='Enabled']")
@@ -40,6 +42,12 @@ public class DashboardPage {
     WebElement profileDropdown;
     @FindBy(xpath = "//a[normalize-space()='Logout']")
     WebElement logoutButton;
+    @FindBy(xpath = "(//i[@class='oxd-icon bi-trash'])[1]")
+    WebElement deleteIcon;
+    @FindBy(xpath = "//button[normalize-space()='Yes, Delete']")
+    WebElement yesDelete;
+    @FindBy(xpath = "//button[normalize-space()='No, Cancel']")
+    WebElement notDelete;
     String store;
     public DashboardPage(ChromiumDriver driver) {
         PageFactory.initElements(driver, this); // Initialize WebElements
@@ -115,5 +123,24 @@ public class DashboardPage {
 
     public void adminCheck(){
         adminBtn.click();
+    }
+    public void deleteUser(String username){
+        adminBtn.click();
+        usernameFeild.sendKeys(username);
+        roleSelect.click();
+        selectAdmin.click();
+        employenameFeild.sendKeys(store);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        selectEmployee.click();
+        statusSelect.click();
+        selectEnable.click();
+        saveBtn.click();
+        deleteIcon.click();
+        yesDelete.click();
+
     }
 }

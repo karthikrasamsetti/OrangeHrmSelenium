@@ -10,6 +10,8 @@
                     <include name="loginTest"/>
                     <include name="createUserTest"/>
                     <include name="editUserTest"/>
+                    <include name="adminUserTest"/>
+                    <include name="deleteUserTest"/>
                 </methods>
             </class>
         </classes>
