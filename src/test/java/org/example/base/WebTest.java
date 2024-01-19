@@ -5,6 +5,7 @@ import org.example.pages.DashboardPage;
 import org.example.pages.ForgotPasswordPage;
 import org.example.pages.LoginPage;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -33,19 +34,16 @@ public class WebTest extends Base{
 
     @Test(testName = "verify forgot your password interface",description ="Password should be verified.user able to click on forgot your password.",priority = 0)
     public void forgotPasswordTest() throws InterruptedException {
-        logger.info("forgotPasswordTest started");
         test = extent.createTest("forgotPasswordTest")
                 .assignAuthor("karthik").assignDevice("Windows Desktop");
         Assert.assertTrue(loginPage.getPasswordField().isDisplayed(),"Password field should be displayed");
         test.log(loginPage.getPasswordField().isDisplayed() ? Status.PASS : Status.FAIL, loginPage.getPasswordField().isDisplayed() ? "PasswordFeild is displayed" : "PasswordFeild is not displayed");
         loginPage.goToForgotPassword();
         Thread.sleep(5000);
-        logger.info("forgotPasswordTest ended");
     }
 
     @Test(testName = "password reset",description ="If the user forgot password they have to select reset password.They change their password and login with new credentials.",priority = 1)
     public void passwordResetTest()  {
-        logger.info("passwordResetTest started");
         test = extent.createTest("passwordResetTest")
                 .assignAuthor("karthik").assignDevice("Windows Desktop");
         Assert.assertTrue(loginPage.getPasswordField().isDisplayed(),"Password field should be displayed");
@@ -53,12 +51,10 @@ public class WebTest extends Base{
         loginPage.goToForgotPassword();
         String username= jsonObject.get("userName").getAsString();
         forgotPasswordPage.restPassword(username);
-        logger.info("passwordResetTest ended");
     }
 
     @Test(testName = "new login functionality",description = "user should be logged in username and new password",priority = 2)
     public void loginTest(){
-        logger.info("loginTest started");
         test = extent.createTest("loginTest")
                 .assignAuthor("karthik").assignDevice("Windows Desktop");
         String username= jsonObject.get("userName").getAsString();
@@ -66,12 +62,10 @@ public class WebTest extends Base{
         test.log(Status.INFO, "started entering the username and password");
         loginPage.orangeLogin(username,password);
         dashboardPage.logout();
-        logger.info("loginTest ended");
     }
 
     @Test(testName = "create user",description = "to create user",priority = 3)
     public void createUserTest() throws InterruptedException {
-        logger.info("createUserTest started");
         test = extent.createTest("createUserTest")
                 .assignAuthor("karthik").assignDevice("Windows Desktop");
         String username= jsonObject.get("userName").getAsString();
@@ -82,13 +76,10 @@ public class WebTest extends Base{
         dashboardPage.createUser(user,password);
         Thread.sleep(5000);
         dashboardPage.logout();
-        logger.info("createUserTest ended");
-
     }
 
     @Test(testName = "Make user an admin",description = "create user and make that user admin ",priority = 4)
     public void editUserTest(){
-        logger.info("editUserTest started");
         test = extent.createTest("editUserTest")
                 .assignAuthor("karthik").assignDevice("Windows Desktop");
         String username= jsonObject.get("userName").getAsString();
@@ -98,11 +89,9 @@ public class WebTest extends Base{
         loginPage.orangeLogin(username,password);
         dashboardPage.editUser(user);
         dashboardPage.logout();
-        logger.info("editUserTest ended");
     }
     @Test(testName = "Verify that new user have all permisssions as admin",description = " Check new user have all permissions as admin.",priority = 5)
     public void adminUserTest(){
-        logger.info("adminUserTest started");
         test = extent.createTest("adminUserTest")
                 .assignAuthor("karthik").assignDevice("Windows Desktop");
         String password = jsonObject.get("password").getAsString();
@@ -115,11 +104,9 @@ public class WebTest extends Base{
         Assert.assertTrue(dashboardPage.getAdd().isDisplayed(),"Add user should be displayed");
         test.log(dashboardPage.getAdd().isDisplayed() ? Status.PASS : Status.FAIL, dashboardPage.getAdd().isDisplayed() ? "Add user is displayed" : "Add user is not displayed");
         dashboardPage.logout();
-        logger.info("adminUserTest ended");
     }
     @Test(testName = "delete user",description = "to delete user",priority = 6)
     public void deleteUserTest(){
-        logger.info("deleteUserTest started");
         test = extent.createTest("deleteUserTest")
                 .assignAuthor("karthik").assignDevice("Windows Desktop");
         String username= jsonObject.get("userName").getAsString();
@@ -131,7 +118,6 @@ public class WebTest extends Base{
         test.log(dashboardPage.getAdmin().isDisplayed() ? Status.PASS : Status.FAIL, dashboardPage.getAdmin().isDisplayed() ? "Admin interface is displayed" : "Admin interface is not displayed");
         dashboardPage.deleteUser(user);
         dashboardPage.logout();
-        logger.info("deleteUserTest ended");
     }
 
 
